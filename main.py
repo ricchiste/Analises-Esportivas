@@ -2,7 +2,7 @@ import tls_client
 from lxml import html
 from bs4 import BeautifulSoup
 
-'''team_adress_A = {
+team_adress_A = {
     'red bull bragantino': '1999',
     'bahia': '1955',
     'palmeiras': '1963',
@@ -93,9 +93,9 @@ def choose_team(time: str):
                 data_list[cont_data_list]['ano'] = 2025
             cont_data_list += 1
         cont_url_list+=1
-    return data_list'''
+    return data_list
 
-#Serve para pegar os nomes e os códigos dos time
+'''#Serve para pegar os nomes e os códigos dos time
 session = tls_client.Session(client_identifier="chrome_115")
 #O url pode substituir pela URL do ano e do campeonato que você quer escolher
 url = "https://www.sofascore.com/api/v1/unique-tournament/325/season/72034/standings/total" 
@@ -103,4 +103,4 @@ res = session.get(url, allow_redirects=True)
 if res.status_code == 200:
     data = res.json()
     for time in data["standings"][0]["rows"]:
-        print(time["team"]["name"].lower(),",",time["team"]["id"] )
+        print(time["team"]["name"].lower(),",",time["team"]["id"] )'''
